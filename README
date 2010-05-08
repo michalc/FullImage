@@ -20,3 +20,9 @@ If your image has id 'myImage'
 If your images have class 'fullImages'
 
 	new FullImage($('.fullImages'));
+
+
+Demos
+-----
+
+[Browser-Width Demo](http://yetagain.net/plugins/fullimage/demo/)
