@@ -30,5 +30,5 @@ If your images have class 'fullImages'
 Demos
 -----
 
-[Browser-Width Demo](http://yetagain.net/plugins/fullimage/demo/)
-[Browser-Width With Zoom Demo](http://yetagain.net/plugins/fullimage/zoomdemo/)
+* [Browser-Width Demo](http://yetagain.net/plugins/fullimage/demo/)
+* [Browser-Width With Zoom Demo](http://yetagain.net/plugins/fullimage/zoomdemo/)
