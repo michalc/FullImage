@@ -5,7 +5,7 @@ FullImage keeps an image at the full width or height of its container, while pre
 
 *Note* If only one dimension of the image container can change (as it typical with liquid layouts), you do not need this class. It is better to use CSS to make that dimension of the image 100%, and the other 'auto'.
 
-![Screenshot](http://github.com/michalc/Fx.Presets/raw/master/Images/Fx.Presets.png)
+![Screenshot](http://github.com/michalc/FullImage/raw/master/Images/FullImage.png)
 
 How to use
 ----------
