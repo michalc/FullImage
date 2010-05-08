@@ -24,6 +24,10 @@ var FullImage = new Class({
 	
 	Implements: [Options],
 	
+	options: {
+		zoom: false
+	},
+	
 	initialize: function(images, options) {
 		this.setOptions(options);
 		this.images = $$(images);
@@ -55,13 +59,17 @@ var FullImage = new Class({
 		var imgRatio = imageSize.width / imageSize.height;
 		var containerRatio = containerSize.width / containerSize.height;
 		
-		var height = (imgRatio < containerRatio) ? containerSize.height : imageSize.height * containerSize.width / imageSize.width;
-		var width = (imgRatio < containerRatio) ? imageSize.width * containerSize.height / imageSize.height : containerSize.width;
-		
+		var fullHeight = (this.options.zoom && imgRatio > containerRatio) || (!this.options.zoom && imgRatio < containerRatio);
+		var fullWidth = (this.options.zoom && imgRatio < containerRatio) ||  (!this.options.zoom && imgRatio > containerRatio);
+
+		var height = (fullHeight) ? containerSize.height : imageSize.height * containerSize.width / imageSize.width;
+		var width = (fullWidth) ? containerSize.width : imageSize.width * containerSize.height / imageSize.height;
+		var margin = (this.options.zoom) ? "-" + (height - containerSize.height) / 2 + "px 0 0 -" + (width - containerSize.width) / 2 + "px" : (containerSize.height - height) / 2 + "px auto";
+
 		img.setStyles({
 			height: height,
 			width: width,
-			'margin-top': (containerSize.height - height) / 2
+			margin: margin
 		});
 		
 	}

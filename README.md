@@ -14,7 +14,7 @@ How to use
 
 If your image has id 'myImage'	
 	
-	new FullImage($('#myImage'));
+	new FullImage($('myImage'));
 	
 ### For multiple images
 
@@ -22,8 +22,13 @@ If your images have class 'fullImages'
 
 	new FullImage($('.fullImages'));
 
+### A single "zoomed" image (no bands at sides or top and bottom)
+
+	new FullImage($('myImage'), {zoom: true});
+
 
 Demos
 -----
 
 [Browser-Width Demo](http://yetagain.net/plugins/fullimage/demo/)
+[Browser-Width With Zoom Demo](http://yetagain.net/plugins/fullimage/zoomdemo/)
